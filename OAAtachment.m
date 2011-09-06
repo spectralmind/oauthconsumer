@@ -1,14 +1,14 @@
 //
-//  OAAttachment.h
+//  OAAtachment.h
 //  Zeus
 //
 //  Created by Jamie Pinkham on 2/3/11.
 //  Copyright 2011 Tumblr. All rights reserved.
 //
 
-#import "OAAttachment.h"
+#import "OAAtachment.h"
 
-@implementation OAAttachment
+@implementation OAAtachment
 
 @synthesize name, filename, contentType, data;
 

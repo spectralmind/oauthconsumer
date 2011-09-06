@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface OAAttachment : NSObject {
+@interface OAAtachment : NSObject {
 	NSString *name;
 	NSString *fileName;
 	NSString *contentType;
@@ -17,10 +17,11 @@
 }
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *fileName;
+@property (nonatomic, copy) NSString *filename;
 @property (nonatomic, copy) NSString *contentType;
 @property (nonatomic, copy) NSData *data;
 
 - (id)initWithName:(NSString *)aName filename:(NSString *)aFilename contentType:(NSString *)aContentType data:(NSData *)aData;
 
 @end
+

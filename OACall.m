@@ -12,6 +12,7 @@
 #import "OADataFetcher.h"
 #import "OAServiceTicket.h"
 #import "OAMutableURLRequest.h"
+#import "NSMutableURLRequest+Parameters.h"
 #import "OACall.h"
 
 @interface OACall (Private)
@@ -139,7 +140,7 @@
 	}
 	if (self.files) {
 		for (NSString *key in self.files) {
-			[request attachFileWithName:@"file" filename:NSLocalizedString(@"Photo.jpg", @"") data:[self.files objectForKey:key]];
+			[request attachFileWithName:@"file" filename:NSLocalizedString(@"Photo.jpg", @"") contentType:@"image/jpg" data:[self.files objectForKey:key]];
 		}
 	}
 	fetcher = [[OADataFetcher alloc] init];

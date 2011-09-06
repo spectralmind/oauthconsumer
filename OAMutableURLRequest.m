@@ -134,7 +134,7 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
 - (void)_generateNonce {
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
     CFStringRef string = CFUUIDCreateString(NULL, theUUID);
-    NSMakeCollectable(theUUID);
+    CFRelease(theUUID);
 	if (nonce) {
 		CFRelease(nonce);
 	}
@@ -195,6 +195,9 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
 	[timestamp release];
 	CFRelease(nonce);
 	[super dealloc];
+}
+
+@end
 }
 
 @end
