@@ -198,6 +198,3 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
 }
 
 @end
-}
-
-@end
