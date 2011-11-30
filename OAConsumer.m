@@ -33,9 +33,16 @@
 
 - (id)initWithKey:(const NSString *)aKey secret:(const NSString *)aSecret {
 	[super init];
-	self.key = [aKey retain];
-	self.secret = [aSecret retain];
+	key = [aKey copy];
+	secret = [aSecret copy];
 	return self;
+}
+			  
+- (void)dealloc {
+    [key release];
+	[secret release];
+
+    [super dealloc];
 }
 
 - (BOOL)isEqual:(id)object {
